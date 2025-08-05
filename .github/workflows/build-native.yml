@@ -13,7 +13,7 @@ jobs:
 
       - uses: lukka/get-cmake@latest
         with:
-          cmakeVersion: 3.10.0
+          cmakeVersion: 3.30.3
 
       - name: Create build directory
         run: mkdir build

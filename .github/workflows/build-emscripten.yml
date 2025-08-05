@@ -13,7 +13,7 @@ jobs:
 
       - uses: lukka/get-cmake@latest
         with:
-          cmakeVersion: 3.10.0
+          cmakeVersion: 3.30.3
 
       - name: Set up Emscripten
         uses: mymindstorm/setup-emsdk@v14

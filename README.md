@@ -3,7 +3,7 @@ Minimal project with multiple dependent libraries, buildable as both WASM and re
 
 ## Dependencies
 - Emscripten 3.1.6
-- Cmake 3.10.0
+- Cmake 3.30.3
 
 ## Build instructions
 
