@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script type="module">
+  import createModule from './build/emscriptenbindings/emscriptenbindings.js';
+    createModule().then(Module => {
+        // Print all the properties the emscripten module has given us.
+        // This will have lots of cruft, but it will also have our methods
+        // and types.
+        console.log(Object.getOwnPropertyNames(Module));
+
+        Module.print_identifier_common();
+        Module.print_identifier_liba();
+        Module.print_identifier_liba_fromcommon();
+        Module.print_identifier_libb();
+	    Module.print_identifier_libb_fromcommon();
+
+        // Prove dynamic dispatch works cross-module in emscripten
+	    const impl = new Module.ConcreteInterfaceImplementation();
+        Module.print_from_interface_libb(impl);
+    });
+</script>
+</body>
+</html>
