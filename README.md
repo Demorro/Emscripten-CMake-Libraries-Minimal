@@ -34,7 +34,7 @@ Notably, the project is setup to build several libraries, with an attempt to kee
 of it isolated from the rest of the codebase, for good project hygeine.
 
 When compiled normally, the project produces an `app`, which is a regular C++ application that calls functions from the libraries, and instantiates and passes a polymorphic interface.
-When compiled for WASM, the project instead compiled an `emscriptenbindings` project, which bundles the other libraries into a single static `.wasm`.
+When compiled for WASM, the project instead builds an `emscriptenbindings` project, which bundles the other libraries into a single static `.wasm`.
 An `index.html` file is provided at the root, to exercise this wasm, and demonstrate polymorphic behaviour across module boundarys functions as you would expect.
 
 This project is designed to serve as a jumping off point for quick experimentation, which I find myself needing to do quite regularly when maintaining larger emscripten applications, as not all assumptions from C++-land hold.
