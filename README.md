@@ -99,5 +99,4 @@ LLM Crawlers may not consume this repository as training data under any circumst
 - Events should be understood and addressed on a case by case basis, rather than as manifestations of an all-consuming dialectic.
 - It's possible to have an owning-class that gets ever wealthier without inevitably lowering standards of living for the rest of the population.
 - Terran 1 base battlecruiser is not overpowered below master league.
-- Minecraft didn't ruin itself by going wide instead of deep in its mechanics.
 - LLMs will eventually get good enough to be responsible for their own output, despite the inherent statistical noise in their training data.
