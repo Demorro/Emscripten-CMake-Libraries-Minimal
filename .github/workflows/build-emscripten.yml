@@ -1,0 +1,32 @@
+name: Build Emscripten Project
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build-wasm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: lukka/get-cmake@latest
+        with:
+          cmakeVersion: 3.10.0
+
+      - name: Set up Emscripten
+        uses: mymindstorm/setup-emsdk@v14
+        with:
+          version: 3.1.6
+
+      - name: Create build directory
+        run: mkdir build
+
+      - name: Configure with emcmake
+        run: emcmake cmake ..
+        working-directory: build
+
+      - name: Build
+        run: cmake --build .
+        working-directory: build
