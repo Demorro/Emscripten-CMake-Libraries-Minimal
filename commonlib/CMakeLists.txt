@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 project(commonlib LANGUAGES CXX)
 
 if(EMSCRIPTEN)
-  add_library(commonlib OBJECT commonlib.cpp)
+  add_library(commonlib OBJECT commonlib.cpp IAbstractInterface.cpp)
 else()
-  add_library(commonlib SHARED commonlib.cpp)
+  add_library(commonlib SHARED commonlib.cpp IAbstractInterface.cpp)
 endif()
 
 target_include_directories(commonlib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

@@ -28,6 +28,10 @@ cd ..
 python3 -m http.server 8000
 Navigate to `http://localhost:8000/index.html` in a web browser, open browser console to see results.
 ```
+
+> [!TIP]  
+> Unsurprisingly, this is a little harder on windows. Remember to be in a VS command prompt, and you may have to set the generator to "NMake Makefiles" if you don't have Ninja installed.
+
 ## Description
 This project is a single CMake project that can build both native applications and WASM applications.
 Notably, the project is setup to build several libraries, with an attempt to keep the emscripten part
